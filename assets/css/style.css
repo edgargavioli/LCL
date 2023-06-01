@@ -17,7 +17,7 @@
     --z-index-max: 100;
 }
 
-@media screen and (max-width: 1180px) {
+ @media screen and (max-width: 1120px) { /* cabeçalho muda a partir de qual tamanho */
     body {
         font-family: 'Rubik', sans-serif;
         overflow-x: hidden;
@@ -50,17 +50,26 @@
        background-color: #1F1E1E;
        opacity: 0.8;
        flex-direction: column;
-       align-items: center;
+       align-items: left;
        transform: translateX(100%);
        transition: transform 0.3s ease-in;
     }
     
     #nav-list li {
-        margin-bottom: 3.125rem;
+        margin-bottom: 1rem;
         letter-spacing: 0.1875rem;
         opacity: 0;
     }
-    
+
+    .menu-icon {
+        padding: 0.625rem;
+    }
+
+    .menu-text {
+        display: flex;
+        align-items: center;
+    }
+
     .button-menu {
         display: block;
     }
