@@ -88,3 +88,71 @@
     }    
 }
 
+        /* Home page section */
+
+#welcome-section {
+    text-align: center;
+    padding: 40px;
+}
+
+#welcome-section img{
+    padding: 10px;
+}
+
+        /* Cursos ofertados section  */
+
+#cursos-ofertados-section h1{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-curso {
+    display: flex;
+    width: 327px;
+    height: 140px;
+    background-size: cover;
+    margin: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-curso:hover{
+    transition: transform .5seg;
+    transform: scale(1.05);
+}
+
+#ingles {
+    background-image: url(img_css/card_cursos/inglaterra.png);
+
+}
+
+#espanhol {
+    background-image: url(img_css/card_cursos/barcelona.png);
+}
+
+#frances {
+    background: url(img_css/card_cursos/paris.png);
+}
+
+#portugues {
+    background: url(img_css/card_cursos/riodejaneiro.png);
+}
+
+        /* Depoimentos section */
+
+#depoimentos h1
+
+.destaque-laranja {
+    color: var(--laranja);
+}
+
