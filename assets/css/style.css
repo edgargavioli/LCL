@@ -77,5 +77,41 @@
     #nav-list.ativa li {
         opacity: 1;
     }    
-}
 
+}
+/*TROCAR PRA CLASSE*/
+
+    .como_aprende {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    
+    .como_aprende h1 strong {
+        color:#173857;
+    }
+
+    /* .falando {
+        display: grid;
+        grid-template-columns: 10px;
+       justify-content: center;
+        gap: 25px;
+    }
+    .lendo {
+        display: grid;
+        grid-template-columns: 10px;
+       justify-content: center;
+        gap: 25px;
+    }
+    .entendendo{
+        display: grid;
+        grid-template-columns: 10px;
+       justify-content: center;
+        gap: 25px;
+    }
+    .escrevendo {
+        display: grid;
+        grid-template-columns: 10px;
+       justify-content: center;
+        gap: 25px;
+    } */
