@@ -215,3 +215,13 @@
     color: var(--laranja);
 }
 
+/*TROCAR PRA CLASSE*/
+.como_aprende {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+}
+
+.como_aprende h1 strong {
+    color:#173857;
+}
