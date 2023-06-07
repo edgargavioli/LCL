@@ -150,7 +150,66 @@
 
         /* Depoimentos section */
 
-#depoimentos h1
+#depoimentos h1 {
+    text-align: center;
+}
+
+#depoimentos h1 strong{
+    color: var(--azul-escuro);
+}
+
+#depoimentos span h1::before, #depoimentos span h1::after {
+    content: "";
+    background-color: rgb(211, 211, 211);
+    display: inline-block;
+    height: 1px;
+    width: 6em;
+    vertical-align: middle;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#depoimentos span h1::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+#depoimentos span h1::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.slider{
+    overflow: hidden;
+
+}
+.slider > .slider-content{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+
+}
+
+.slider > .slider-content > .slider-item {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider > input:nth-child(1):checked ~ .slider-content{
+    transform: translateX(0%);
+}
+
+.slider > input:nth-child(2):checked ~ .slider-content{
+    transform: translateX(-100%);
+}
+.slider > input:nth-child(3):checked ~ .slider-content{
+    transform: translateX(-200%);
+}
+
+.slider > input:nth-child(4):checked ~ .slider-content{
+    transform: translateX(-300%);
+}
 
 .destaque-laranja {
     color: var(--laranja);
