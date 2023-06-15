@@ -179,110 +179,69 @@
     margin-right: -50%;
 }
 
-.slider{
-    overflow: hidden;
+    /*********** CARROSSEL ***********/
 
-}
-.slider > .slider-content{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    transition: all 500ms ease;
+    
 
-}
-
-.slider > .slider-content > .slider-item {
-    flex: 0 0 auto;
-    width: 100%;
+.cardCarrossel{
+    width: 360px;
+    height: 470px;
+    text-align: justify;
+    padding: 10px;
+    /* margin: 10px; */
+    font-size: 22pt;
+    flex-shrink: 0;
 }
 
-.slider > input:nth-child(1):checked ~ .slider-content{
-    transform: translateX(0%);
+.cardCarrossel p{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
 }
 
-.slider > input:nth-child(2):checked ~ .slider-content{
-    transform: translateX(-100%);
-}
-.slider > input:nth-child(3):checked ~ .slider-content{
-    transform: translateX(-200%);
-}
 
-.slider > input:nth-child(4):checked ~ .slider-content{
-    transform: translateX(-300%);
-}
-
-.destaque-laranja {
-    color: var(--laranja);
-}
-
-/*TROCAR PRA CLASSE*/
-.como_aprende {
-    display: grid;
-    grid-template-columns: auto;
-    text-align: center;
-}
-
-.como_aprende h1 strong {
-    color:#173857;
-}
-
-/*==== NOSSA EQUIPE ====*/
-#equipe {
-    text-align: center;
-}
-
-#equipe .tittle {
-    margin: 3.125rem 0 3.125rem 0;
-}
-
-#equipe .tittle h1 {
-    font-weight: normal;
-}
-
-#equipe .tittle strong {
-    color: var(--azul-escuro);
-}
-
-#equipe .card-a,
-#equipe .card-b {
-    display: grid;
-    margin-bottom: 1.25rem;
-}
-
-#equipe .card-a {
-    grid-template-areas: 'col-img col-text';
-}
-
-#equipe .card-b {
-    grid-template-areas: 'col-text col-img';
-}
-
-#equipe .card-a .card-img,
-#equipe .card-b .card-img {
-    grid-area: col-img;
-}
-
-#equipe .card-a .card_content,
-#equipe .card-b .card_content {
-    grid-area: col-text;
+.carrosselAvatar{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding-top: 50px;
 }
 
-#equipe .card-b .card_content {
-    padding-left: 5%;
+.carrosselAvatar img{
+    width: 100px;
+    height: 100px;
+    background: url(img_css/card_cursos/Ellipse\ 1.png);
 }
 
-#equipe .card-a .card_content .card_tittle h2,
-#equipe .card-b .card_content .card_tittle h2{
-    font-size: 20px;
-    color: var(--laranja);
+.carrosselAvatar p{
+    color: #ff8400;
+    padding: 20px;
 }
 
-#equipe .card-a .card_content .card_text h3,
-#equipe .card-b .card_content .card_text h3{
-    font-size: 16px;
-    text-align: justify;
-    font-weight: normal;
+.carrossel{
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    /* -webkit-overflow-scrolling: auto; */
 }
+
+#menuCarrossel{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+}
+
+.button{
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: #dadada;
+    margin: 0.4em;
+}
+
+.ativaCarrosButton{
+    background-color: #173857;
+    color: blue;
+}
+
