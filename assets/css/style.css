@@ -225,3 +225,64 @@
 .como_aprende h1 strong {
     color:#173857;
 }
+
+/*==== NOSSA EQUIPE ====*/
+#equipe {
+    text-align: center;
+}
+
+#equipe .tittle {
+    margin: 3.125rem 0 3.125rem 0;
+}
+
+#equipe .tittle h1 {
+    font-weight: normal;
+}
+
+#equipe .tittle strong {
+    color: var(--azul-escuro);
+}
+
+#equipe .card-a,
+#equipe .card-b {
+    display: grid;
+    margin-bottom: 1.25rem;
+}
+
+#equipe .card-a {
+    grid-template-areas: 'col-img col-text';
+}
+
+#equipe .card-b {
+    grid-template-areas: 'col-text col-img';
+}
+
+#equipe .card-a .card-img,
+#equipe .card-b .card-img {
+    grid-area: col-img;
+}
+
+#equipe .card-a .card_content,
+#equipe .card-b .card_content {
+    grid-area: col-text;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#equipe .card-b .card_content {
+    padding-left: 5%;
+}
+
+#equipe .card-a .card_content .card_tittle h2,
+#equipe .card-b .card_content .card_tittle h2{
+    font-size: 20px;
+    color: var(--laranja);
+}
+
+#equipe .card-a .card_content .card_text h3,
+#equipe .card-b .card_content .card_text h3{
+    font-size: 16px;
+    text-align: justify;
+    font-weight: normal;
+}
