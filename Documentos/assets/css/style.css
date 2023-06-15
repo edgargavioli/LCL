@@ -1,0 +1,25 @@
+#caixa{
+    padding: 30px;
+   margin-left: 20%;
+   margin-right: 20%;
+   font-size: 22px;
+   font-weight: 400;
+   text-align: justify;
+   }
+   #asda{
+    text-align: center;
+   }
+   img{
+    display: block;
+     width: 180px;
+     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   
+     .nomeee{
+    position: static;
+    font-size: 22px;
+    text-align: center;
+    color: coral;
+   }
