@@ -38,6 +38,7 @@
         background-color: #173857;
         transition: all 0.2s ease;
         height: 6vh;
+        top: -1px;
     }
 
     #menu a {
@@ -92,6 +93,7 @@
     }
 
     #menu.ativa {
+        overflow: hidden;
         position: fixed;
         display: flex;
         height: 100vh;
