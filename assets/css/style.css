@@ -37,6 +37,7 @@
         position: fixed;
         background-color: #173857;
         transition: all 0.2s ease;
+        height: 6vh;
     }
 
     #menu a {
@@ -269,19 +270,49 @@
     color: blue;
 }
 
+/*===COMO APRENDE===*/
+
 .como_aprende {
     display: grid;
     grid-template-columns: auto;
     text-align: center;
+    margin-top: 50px;
+    background-color: #F8F8F8;
+}
+
+.como_aprende h1 {
+    margin-bottom: 50px;
 }
 
 .como_aprende h1 strong {
     color:#173857;
 }
 
+.cardHow {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.cardHow img {
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.cardHow h3 {
+    margin-bottom: 5px;
+}
+
+.cardHow p {
+    margin-bottom: 10px;
+}
+
 /*==== NOSSA EQUIPE ====*/
 #equipe {
-    background-color: #F8F8F8;
     text-align: center;
 }
 

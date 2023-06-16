@@ -1,7 +1,7 @@
 const buttonMenu = document.getElementById("botaoMenu");
 const buttonCloseMenu = document.getElementById("botaoClose");
 const list = document.getElementById("menu");
-const mobile_menu = document.getElementById("mobile_menu")
+const mobile_menu = document.getElementById("mobile_menu");
 
 window.addEventListener("scroll", () => {
     if(scrollY > 50) {
@@ -11,24 +11,17 @@ window.addEventListener("scroll", () => {
     }
 })
 
+function toggleMenu() {
+    mobile_menu.classList.toggle("menu_on");
+    list.classList.toggle("ativa");
+}
+
 buttonMenu.addEventListener("click", () => {
-    if(list.className == "ativa"){
-        mobile_menu.classList.remove("menu_on");
-        list.classList.remove("ativa")
-    }else{
-        mobile_menu.classList.add("menu_on");
-        list.classList.add("ativa")
-    }
+        toggleMenu();
 })
 
 buttonCloseMenu.addEventListener("click", () => {
-    if(list.className == "ativa"){
-        mobile_menu.classList.remove("menu_on");
-        list.classList.remove("ativa")
-    }else{
-        mobile_menu.classList.add("menu_on");
-        list.classList.add("ativa")
-    }
+        toggleMenu();
 })
 
 const faqs = document.querySelectorAll(".faq");
