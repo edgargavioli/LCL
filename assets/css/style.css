@@ -15,6 +15,7 @@
     --branco: #FFFFFF;
 
     --z-index-max: 100;
+    --width-mobile: 375;
 }
 
  @media screen and (max-width: 1120px) { /* cabeçalho muda a partir de qual tamanho */
@@ -152,6 +153,11 @@
 
 #depoimentos h1 {
     text-align: center;
+    font-size: 20pt;
+}
+
+#h1-depoimentos{
+    padding-top: 20px;
 }
 
 #depoimentos h1 strong{
@@ -181,31 +187,78 @@
 
     /*********** CARROSSEL ***********/
 
-.carrossel{
+/* .carrossel{
     display: flex;
     flex-flow: row nowrap;
     overflow-x: scroll;
-    /* -webkit-overflow-scrolling: auto; */
+    -webkit-overflow-scrolling: auto;
     scroll-snap-type: x mandatory;
-}    
+}     */
 
-.cardCarrossel{
-    width: 360px;
-    height: 470px;
-    text-align: justify;
-    padding: 10px;
-    /* margin: 10px; */
-    font-size: 22pt;
-    flex-shrink: 0;
-    scroll-snap-align: center
+.container {
+  position: relative;
+  padding: 15px;
+  max-width: var(--width-mobile);
+  margin: 0 auto;
+  border-radius: 4%;
 }
 
-.cardCarrossel p{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
+.gallery-wrapper {
+  overflow-x: auto;
 }
 
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 1%, rgba(0, 0, 0, 0.034));
+  opacity: 0.1;
+  cursor: pointer;
+  border: none;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 1%, rgba(0, 0, 0, 0.034));
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.item {
+  width: 250px;
+  height: 300px;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  align-items: center;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+#item-first {
+    margin-left: 45px;
+}
+
+#item-last {
+    margin-right: 45px;
+}
 
 .carrosselAvatar{
     display: flex;
@@ -224,58 +277,6 @@
     color: #ff8400;
     padding: 20px;
 }
-
-
-
-#menuCarrossel{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.button{
-    width: 15px;
-    height: 15px;
-    margin: 0.4em;
-}
-
-input[type="radio"] {
-    /* Add if not using autoprefixer */
-    -webkit-appearance: none;
-    /* Remove most all native input styles */
-    appearance: none;
-    /* For iOS < 15 */
-    background-color: #dadada;
-    /* Not removed via appearance */
-    margin: 0.4em;
-  
-    font: inherit;
-    color: currentColor;
-    width: 0.8em;
-    height: 0.8em;
-    border: 0.15em solid transparent;
-    border-radius: 50%;
-    transform: translateY(-0.075em);
-  
-    display: grid;
-    place-content: center;
-  }
-  
-  input[type="radio"]::before {
-    content: "";
-    width: 0.8em;
-    height: 0.8em;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 120ms transform linear;
-    box-shadow: inset 1em 1em var(--azul-escuro);
-    /* Windows High Contrast Mode */
-    background-color: CanvasText;
-  }
-  
-  input[type="radio"]:checked::before {
-    transform: scale(1);
-  }
 
 
   /* input[type="radio"]:focus {

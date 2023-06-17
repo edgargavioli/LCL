@@ -9,7 +9,38 @@ buttonMenu.addEventListener("click", () => {
     }
 })
 
-const inputCarrossel1 = document.getElementById("input1")
-const inputCarrossel2 = document.getElementById("input2")
-const inputCarrossel3 = document.getElementById("input3")
-const inputCarrossel4 = document.getElementById("input4")
+
+
+const controls = document.querySelectorAll(".control");
+let currentItem = 0;
+const items = document.querySelectorAll(".item");
+const maxItems = items.length;
+
+controls.forEach((control) => {
+  control.addEventListener("click", (e) => {
+    isLeft = e.target.classList.contains("arrow-left");
+
+    if (isLeft) {
+      currentItem -= 1;
+    } else {
+      currentItem += 1;
+    }
+
+    if (currentItem >= maxItems) {
+      currentItem = 0;
+    }
+
+    if (currentItem < 0) {
+      currentItem = maxItems - 1;
+    }
+
+    items.forEach((item) => item.classList.remove("current-item"));
+
+    items[currentItem].scrollIntoView({
+      behavior: "smooth",
+      inline: "center"
+    });
+
+    items[currentItem].classList.add("current-item");
+  });
+});
