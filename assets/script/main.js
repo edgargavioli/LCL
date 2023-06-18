@@ -1,46 +1,12 @@
 const buttonMenu = document.getElementById("botaoMenu");
-const list = document.getElementById("nav-list");
+const buttonCloseMenu = document.getElementById("botaoClose");
+const list = document.getElementById("menu");
+const mobile_menu = document.getElementById("mobile_menu");
 
-buttonMenu.addEventListener("click", () => {
-    if(list.className == "ativa"){
-        list.classList.remove("ativa")
+window.addEventListener("scroll", () => {
+    if(scrollY > 50) {
+        mobile_menu.classList.add("onScroll");
     }else{
-        list.classList.add("ativa")
+        mobile_menu.classList.remove("onScroll");
     }
 })
-
-
-
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
-
-controls.forEach((control) => {
-  control.addEventListener("click", (e) => {
-    isLeft = e.target.classList.contains("arrow-left");
-
-    if (isLeft) {
-      currentItem -= 1;
-    } else {
-      currentItem += 1;
-    }
-
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
-
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
-
-    items.forEach((item) => item.classList.remove("current-item"));
-
-    items[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "center"
-    });
-
-    items[currentItem].classList.add("current-item");
-  });
-});
